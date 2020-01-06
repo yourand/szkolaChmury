@@ -1,4 +1,4 @@
-## Praca domowa week 3
+## Praca domowa tydzien 3
 
 ##### env
 ```
