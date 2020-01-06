@@ -8,7 +8,7 @@ region="eu-west-1"
 ## Projekt
 
 #### Zlozenia
-Budowana jest aplikacja wspolp[arcujaca z s3 bucket.  
+Budowana jest aplikacja wspolpracujaca z s3 bucket.  
 Aplikacja dziala na wirtualnej maszynie i musi miec mozliwosc zapisywanie na bucket S3.  
 
 #### Wymagania aplikacji pracujacej na vm
@@ -26,7 +26,7 @@ Aplikacja dziala na wirtualnej maszynie i musi miec mozliwosc zapisywanie na buc
 
 ## PoC
 
-#### Procedura. Korekta procedury z uwagi na wykonanie zdania w CLI.
+#### Procedura. Korekta procedury z uwagi na wykonanie zadania w CLI.
 1. Utworzenie trust policy.
 2. Utworzenie roli z trust policy 2-ec2RoleTrustPolicy.json.
 3. Utworzenie policy 1-allowBucketOp.json.
