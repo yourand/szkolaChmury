@@ -78,9 +78,7 @@ Mapowanie usług:
 
 Logiczny podział organizacji w na działy funkcjonalne obrazuje zakres niniejszego projektu i będzie rozwijanym szablonem dla dalszych kroków.
 
-
-
-![](D:\Users\Robert\OneDrive - overseer.pl\50 - Szkolenia\11 - GCP Architekt\2 - tygodnie\7 - tydzien7\Poprawione\img\log-org.png)
+![Alt text](img\log-org.png?raw=true "Title")
 
 
 
