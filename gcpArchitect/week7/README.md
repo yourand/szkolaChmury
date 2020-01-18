@@ -88,7 +88,7 @@ Ze względu na ograniczony zakres posiadanych danych zaproponowano rozwiązanie 
 
 
 
-![Alt text](img\log-proj.png)
+![Alt text](https://github.com/yourand/szkolaChmury/blob/master/gcpArchitect/week7/img/log-proj.png)
 
 ### 4.2.  Architektura sieciowa
 
