@@ -78,7 +78,7 @@ Mapowanie usług:
 
 Logiczny podział organizacji w na działy funkcjonalne obrazuje zakres niniejszego projektu i będzie rozwijanym szablonem dla dalszych kroków.
 
-![Alt text](img\log-org.png?raw=true "Title")
+![Alt text](gcpArchitect/week7/img/log-org.png?raw=true "Title")
 
 
 
