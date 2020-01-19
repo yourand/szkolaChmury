@@ -2,7 +2,8 @@
 
 #### 1. Schemat
 
-![](D:\Users\Robert\OneDrive - overseer.pl\50 - Szkolenia\14 - SK-AWSArch\4 - tydzien4\img\schemat01.png)
+![Alt text](https://github.com/yourand/szkolaChmury/blob/master/awsArchitectAssociate/week4/img/schemat01.png)
+
 
 #### 1. VPC
 
