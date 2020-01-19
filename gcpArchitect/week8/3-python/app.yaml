@@ -1,0 +1,35 @@
+  
+runtime: python
+env: flex
+entrypoint: gunicorn -b :8080 main:app
+
+runtime_config:
+  python_version: 3.7
+
+#[START gae_flex_mysql_env]
+env_variables:
+    # Replace user, password, database, and instance connection name with the values obtained
+    # when configuring your Cloud SQL instance.
+    SQLALCHEMY_DATABASE_URI: >-
+      mysql+pymysql://dbadmin:71c02bbb5ca7fa57@/DATABASE?unix_socket=/cloudsql/szkola-chmury-agcp:europe-west3:rk-my-sql01
+#[END gae_flex_mysql_env]
+
+#[START gae_flex_mysql_settings]
+# Replace project and instance with the values obtained  when configuring your
+# Cloud SQL instance.
+beta_settings:
+    cloud_sql_instances: "szkola-chmury-agcp:europe-west3:rk-my-sql01=tcp:3306"
+      
+#[END gae_flex_mysql_settings]
+resources:
+  cpu: 1
+  memory_gb: 1
+  disk_size_gb: 10
+
+manual_scaling:
+  instances: 1
+
+#db_instance_address = 34.89.219.133                                                                                                                                
+#db_instance_generated_user_password = 71c02bbb5ca7fa57                                                                                                             
+#db_instance_name = rk-my-sql01                                                                                                                                     
+#db_instance_username = dbadmin  
