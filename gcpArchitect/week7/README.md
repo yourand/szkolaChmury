@@ -1,4 +1,5 @@
 Zadanie domowe nr  7
+## W trakcie przygotowania ...
 
 ## 1. Wstęp
 
