@@ -273,10 +273,6 @@ gcloud compute firewall-rules create fire02-lab-project-b-01 \
 	--network vpc-lab-project-b-01 \
     --allow tcp:22,tcp:3389,icmp
 
-gcloud compute networks subnets create subnet01-lab-project-b-01 \
-	--network=vpc-lab-project-b-01 \
-    --range=172.20.0.0/20 \
-    --region=us-central1
 ```
 
 C
@@ -298,10 +294,34 @@ gcloud compute firewall-rules create fire01-lab-project-c-01 \
 gcloud compute networks subnets create managementsubnet-europe \
 	--network=vpc-lab-project-c-01 \
     --range=10.130.0.0/20 \
-    --region=us-central1
+    --region=europe-west1
+    
+gcloud compute networks subnets create subnet01-lab-project-b-01 \
+	--network=vpc-lab-project-c-01 \
+	--range=172.20.0.0/20 \
+	--region=us-central1
 ```
 
+Shared VPC:
 
+```
+gcloud beta compute shared-vpc enable szkola-chmury-pr-c
 
+gcloud compute shared-vpc associated-projects add szkola-chmury-pr-b \
+	--host-project szkola-chmury-pr-c
 
+gcloud projects add-iam-policy-binding szkola-chmury-pr-c \
+	--member "user:admin.gcp@overseer.eu" \
+	--role "roles/compute.networkUser"
+```
+
+Utworzenie maszyny w C:
+
+```
+gcloud compute instances create vm01-pr0-c \
+        --zone=europe-west1-b --machine-type=f1-micro \
+        --preemptible \
+        --subnet=managementsubnet-europe \
+        --image=debian-9-stretch-v20191210 --image-project=debian-cloud
+```
 
