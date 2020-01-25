@@ -124,8 +124,7 @@ Dostęp do bazy będzie możliwy tylko za pomocą adresacji prywatnej.
 Wysoką dostępność zapewnia synchroniczna kopia bazy danych realizowane w ramach regionu oraz dwóch stref.
 
 
-
-![](D:\Users\Robert\OneDrive - overseer.pl\50 - Szkolenia\11 - GCP Architekt\2 - tygodnie\7 - tydzien7\img\db-ha.png)
+rys HA BAZA
 
 ### 5. Procedury przywracania po awarii.
 
