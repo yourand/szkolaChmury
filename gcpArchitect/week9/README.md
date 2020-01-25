@@ -206,6 +206,101 @@ Modyfikacja routingu.
 
 
 
+##### 1. Utwórz trzy osobne projekty.
+
+Projekty:
+
+```
+gcloud projects create szkola-chmury-pr-a --folder=813244329151
+gcloud projects create szkola-chmury-pr-b --folder=813244329151
+gcloud projects create szkola-chmury-pr-c --folder=813244329151
+```
+
+Podpięcie kont bilingowych:
+
+```
+gcloud beta billing projects link szkola-chmury-pr-a \
+  --billing-account ${GCP_billing_account}
+gcloud beta billing projects link szkola-chmury-pr-b \
+  --billing-account ${GCP_billing_account}
+gcloud beta billing projects link szkola-chmury-pr-c \
+  --billing-account ${GCP_billing_account}
+```
+
+VPC:
+
+A
+
+```
+gcloud config set project szkola-chmury-pr-a
+
+gcloud compute networks create vpc-lab-project-a-01 --subnet-mode=custom
+
+gcloud compute firewall-rules create fire01-lab-project-a-01 \
+	--network vpc-lab-project-a-01 \
+	--allow tcp,udp,icmp \
+	--source-ranges 0.0.0.0/0
+	
+gcloud compute firewall-rules create fire02-lab-project-a-01 \
+	--network vpc-lab-project-a-01 \
+    --allow tcp:22,tcp:3389,icmp
+
+gcloud compute networks subnets create subnet01-lab-project-a-01 \
+	--network=vpc-lab-project-a-01 \
+    --range=10.128.0.0/20 \
+    --region=us-central1
+ 
+gcloud compute networks subnets create subnet02-lab-project-a-01 \
+	--network=vpc-lab-project-a-01 \
+    --range=10.132.0.0/20 \
+    --region=europe-west1
+
+```
+
+B
+
+```
+gcloud config set project szkola-chmury-pr-b
+
+gcloud compute networks create vpc-lab-project-b-01 --subnet-mode=custom
+
+gcloud compute firewall-rules create fire01-lab-project-b-01 \
+	--network vpc-lab-project-b-01 \
+	--allow tcp,udp,icmp \
+	--source-ranges 0.0.0.0/0
+	
+gcloud compute firewall-rules create fire02-lab-project-b-01 \
+	--network vpc-lab-project-b-01 \
+    --allow tcp:22,tcp:3389,icmp
+
+gcloud compute networks subnets create subnet01-lab-project-b-01 \
+	--network=vpc-lab-project-b-01 \
+    --range=172.20.0.0/20 \
+    --region=us-central1
+```
+
+C
+
+```
+gcloud config set project szkola-chmury-pr-c
+
+gcloud compute networks create vpc-lab-project-c-01 --subnet-mode=custom
+
+gcloud compute firewall-rules create fire02-lab-project-c-01 \
+	--network vpc-lab-project-c-01 \
+	--allow tcp,udp,icmp \
+	--source-ranges 0.0.0.0/0
+	
+gcloud compute firewall-rules create fire01-lab-project-c-01 \
+	--network vpc-lab-project-c-01 \
+    --allow tcp:22,tcp:3389,icmp
+
+gcloud compute networks subnets create managementsubnet-europe \
+	--network=vpc-lab-project-c-01 \
+    --range=10.130.0.0/20 \
+    --region=us-central1
+```
+
 
 
 
