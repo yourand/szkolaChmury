@@ -28,7 +28,7 @@ W celu spełnienia wymagań, zostanie utworzony dedykowany bucket na Cloud Stora
 
  
 
-![img](file:///C:/Users/Robert/AppData/Local/Temp/msohtmlclip1/01/clip_image002.png)
+![img](file://https://github.com/yourand/szkolaChmury/blob/master/gcpArchitect/week6/img/arch.png?raw=true)
 
  
 
