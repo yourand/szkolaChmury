@@ -204,7 +204,6 @@ Modyfikacja routingu.
 
 #### Zadanie 2. Przygotowaliśmy pewną architekturę, której schemat jest już gotowy, lecz brakuje realizacji.
 
-![Alt text](https://github.com/JimiDeSoto/gcpArchitect/blob/master/week9/zadanie/schemat.png)
 ![Alt text](https://github.com/yourand/szkolaChmury/blob/master/gcpArchitect/week9/zadanie/img/schemat.png)
 
 
