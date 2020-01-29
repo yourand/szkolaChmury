@@ -17,11 +17,11 @@ Jako architekt ustaliłeś kilka pryncypiów projektowych, które powinny być r
 
 | Zasób           | Szablon                                    |
 | --------------- | ------------------------------------------ |
-| Resource group  | rg-<region>-<srodowisko>-<licznik>         |
-| VNET            | vnet-<region>-<srodowisko>-<licznik>       |
-| VM              | vm-<region>-<srodowisko>-<os>-<licznik>    |
-| Disk            | disk-<typ>-<nazwa vm>-<licznik>            |
-| Storage Account | st-<region>-<typ><przeznaczenie>-<licznik> |
+| Resource group  | ```rg-<region>-<srodowisko>-<licznik>```         |
+| VNET            | ```vnet-<region>-<srodowisko>-<licznik>```       |
+| VM              | ```vm-<region>-<srodowisko>-<os>-<licznik>```    |
+| Disk            | ```disk-<typ>-<nazwa vm>-<licznik>```            |
+| Storage Account | ```st-<region>-<typ><przeznaczenie>-<licznik>``` |
 
 #### TYDZIEN3.2
 
