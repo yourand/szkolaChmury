@@ -172,7 +172,7 @@ Jako architekt ustaliłeś kilka pryncypiów projektowych, które powinny być r
    	--parameters 2-keyvault.parameters.json
    ```
    
-2. Dokonano modyfikacji pliku z parametrami template main 2-main.parameters.json przekierowując wskazanie na nazwę użytkownika i hasło do Key Vault.
+2. Dokonano modyfikacji pliku z parametrami template main [2-main.parameters.json](2-main.parameters.json) przekierowując wskazanie na nazwę użytkownika i hasło do Key Vault.
 
    
 
