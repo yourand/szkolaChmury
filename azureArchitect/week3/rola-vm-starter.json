@@ -1,0 +1,15 @@
+{
+    "Name": "VM starter",
+    "Id": null,
+    "IsCustom": true,
+    "Description": "Wlacz/wylacz vm, napisz do supportu",
+    "Actions": [
+      "Microsoft.Compute/virtualMachines/start/action",
+      "Microsoft.Compute/virtualMachines/powerOff/action",
+      "Microsoft.Support/supportTickets/write"
+    ],
+    "NotActions": [],
+    "AssignableScopes": [
+      "/subscriptions/<sub_id>"
+    ]
+  }

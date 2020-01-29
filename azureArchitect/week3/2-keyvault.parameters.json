@@ -1,0 +1,24 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+            "keyVaultName": {
+            "value": "rk01-key-vault"
+          },
+          "objectId": {
+            "value": "c962a7a1-cbc2-43f4-b118-35d09f14e8b5"
+          },
+          "secretName": {
+            "value": "vmuserpassword"
+          },
+          "secretValue": {
+            "value": "Q7FMFzCrPYx6nDAKUPaD%"
+          },
+          "userName": {
+            "value": "vmusername"
+          },
+          "userValue": {
+            "value": "vmadmin"
+          }
+        }
+}
