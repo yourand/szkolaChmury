@@ -163,7 +163,7 @@ Jako architekt ustaliłeś kilka pryncypiów projektowych, które powinny być r
 
 **Realizacja:**
 
-1. Zgodnie z wymogiem tworzenia zasobów przez arm template przygotowano przygotowano [2-keyvault.json](2-keyvault.json) oraz [2-keyvault.parameters.json](2-keyvault.parameters.json). Przygotowane template tworzą *Key Vault* oraz secrety nazwa użytkownika oraz hasło.
+1. Zgodnie z wymogiem tworzenia zasobów przez arm template przygotowano [2-keyvault.json](2-keyvault.json) oraz [2-keyvault.parameters.json](2-keyvault.parameters.json). Przygotowane template tworzą *Key Vault* oraz secrety nazwa użytkownika oraz hasło.
 
    ```
    az group deployment create --name siec7 \
