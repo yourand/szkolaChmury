@@ -33,7 +33,7 @@ Jako architekt ustaliłeś kilka pryncypiów projektowych, które powinny być r
 
    a) 1-main.json - tempalate główny tworzący podstawowe elementy infrastruktury oraz wywołujący *linked template*, który tworzy  *Network Security Group*,
 
-   b) 1-linked-nsg - podlinkowany template tworzący *Network Security Group*.
+   b) 1-linked-nsg [GitHub Pages](azureArchitect/week3/1-main.json)- podlinkowany template tworzący *Network Security Group*.
 
    | Zasób                | Nazwa        | Template |
    | -------------------- | ------------ | -------- |
