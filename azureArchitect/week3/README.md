@@ -31,9 +31,9 @@ Jako architekt ustaliłeś kilka pryncypiów projektowych, które powinny być r
 
 1. Przygotowano dwa template:
 
-   a) 1-main.json - tempalate główny tworzący podstawowe elementy infrastruktury oraz wywołujący *linked template*, który tworzy  *Network Security Group*,
+   a) [1-main.json](1-main.json) - tempalate główny tworzący podstawowe elementy infrastruktury oraz wywołujący *linked template*, który tworzy  *Network Security Group*,
 
-   b) 1-linked-nsg - podlinkowany template tworzący *Network Security Group*.
+   b) [1-linked-nsg.json](1-linked-nsg.json)- podlinkowany template tworzący *Network Security Group*.
 
    | Zasób                | Nazwa        | Template |
    | -------------------- | ------------ | -------- |
