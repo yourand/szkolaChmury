@@ -333,12 +333,12 @@
 
 #### Zadanie 2.
 
-*Twoim drugim zadaniem będzie odpowiednie zbudowanie połączenia do aplikacji znajdującej się on-premises. Poniżej znajdziesz główne wymagania, które musisz spełnić
+*Twoim drugim zadaniem będzie odpowiednie zbudowanie połączenia do aplikacji znajdującej się on-premises. Poniżej znajdziesz główne wymagania, które musisz spełnić*
 
-Przez aplikacje będzie przepływać około 70 GB danych dziennie z dużym natężeniem przez co jakakolwiek przerwa połączenia nie jest akceptowalna.
+*Przez aplikacje będzie przepływać około 70 GB danych dziennie z dużym natężeniem przez co jakakolwiek przerwa połączenia nie jest akceptowalna.*
 
-Dopasuj odpowiednie rozwiązanie, aby połączenie pomiędzy środowiskiem w Google Cloud, a środowiskiem lokalnym było dodatkowo szyfrowane oraz zawierało odpowiednie przepustowości, aby spełnić dzienny limit.
+*Dopasuj odpowiednie rozwiązanie, aby połączenie pomiędzy środowiskiem w Google Cloud, a środowiskiem lokalnym było dodatkowo szyfrowane oraz zawierało odpowiednie przepustowości, aby spełnić dzienny limit.*
 
-Jaki komponent dodałbyś do schematu ,aby przełączanie pomiędzy źródłami przesyłu danych było w pełni automatyczne podczas awarii?*
+*Jaki komponent dodałbyś do schematu ,aby przełączanie pomiędzy źródłami przesyłu danych było w pełni automatyczne podczas awarii?*
 
 ### Uzupelnic
