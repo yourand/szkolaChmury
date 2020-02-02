@@ -7,7 +7,9 @@
 
 *Na bazie swoich doświadczeń i podstawowej wiedzy o maszynach wirtualnych oraz Scale Set zaproponuj kilka kroków, które byś zrealizował w ramach takiej migracji. Przy każdym kroku napisz maksymalnie 2-3 zdania, jakie czynności w takim kroku byś zrealizował.*
 *Pamiętaj o ograniczeniach w chmurze, limitach oraz ograniczeniach co do tego, jakie parametry wirtualnych maszyn, możesz uzyskać w Azure.*
+
 ![Alt text](https://github.com/yourand/szkolaChmury/blob/master/azureArchitect/week4/img/plan.PNG)
+
 1. Audyt/inwentaryzacja.
 
    Szczegółowa inwentaryzacja zasobów, które mają podlegać migracji. Inwentaryzacja powinna obejmować:
