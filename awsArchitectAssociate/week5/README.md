@@ -11,3 +11,4 @@ Testowo do instalacji CloudWatch agent-a wykorzystałem standardowy template Cla
 ```
 https://raw.githubusercontent.com/awslabs/aws-cloudformation-templates/master/aws/solutions/AmazonCloudWatchAgent/ssm/amazon_linux.template
 ```
+![](aws-cloudwatcher-agent.PNG)
