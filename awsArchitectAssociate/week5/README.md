@@ -1,6 +1,6 @@
 ## Praca domowa tydzień 3
 
-ClowdWatch nie monitoruje pamięci RAMA w EC2.
+ClowdWatch nie monitoruje pamięci RAM w EC2.
 
 Rozwiązaniem problemu, jest instalacja CloudWatch agent-a.
 
