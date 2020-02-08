@@ -27,11 +27,15 @@ System zbudowany na zasadzie wielu aplikacji na serwerach linux-owych realizują
 #### Lab Service Fabric
 
 ##### Uruchomienie
+**Service Fabric Explorer**
+![Alt text](https://github.com/yourand/szkolaChmury/blob/master/azureArchitect/week5/img/service-fabric-explorer.PNG)
 
-
+**Voting App**
+![Alt text](https://github.com/yourand/szkolaChmury/blob/master/azureArchitect/week5/img/voting-app-1.PNG)
 
 ##### Upgrade
-
+**Aktualizacja**
+![Alt text](https://github.com/yourand/szkolaChmury/blob/master/azureArchitect/week5/img/voting-app-upgrade.PNG)
 
 
 
