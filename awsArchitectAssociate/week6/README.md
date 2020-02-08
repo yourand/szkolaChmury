@@ -2,11 +2,11 @@
 
 *Budujesz aplikację w chmurze, Aplikacja uruchomiona na 3 VM, Środowisko TEST, Zatrzymaj maszyny o godzinie 22 uruchom o 7:00*
 
-Na potrzeby zadani zostaną wykorzystane AWS Lambda
+Na potrzeby zadania zostaną wykorzystane AWS Lambda
 
 ##### 1. Utworzenie policy
+![Polityka](./ec2-start-stop-policy.json) 
 
-link
 
 ##### 2. Utworzenie roli
 
@@ -14,7 +14,7 @@ Utworzenie roli dla Lambda z poprzednią polityką.
 
 ##### 3. Utworzenie AWS Lambda do zatrzymania instancji
 
-link
+![Python stop](./ec2-stop.py)
 
 ##### 4. Utworzenie rule w CloudWatch
 
@@ -35,7 +35,7 @@ REPORT RequestId: f96fede8-c447-4035-83b1-063370160227	Duration: 960.09 ms	Bille
 
 ##### 6. Utworzenie AWS Lambda do uruchamiania instancji
 
-link
+![Python stop](./ec2-start.py)
 
 ##### 4. Utworzenie rule w CloudWatch
 
@@ -52,7 +52,6 @@ END RequestId: d34822a5-506e-4623-89fc-a6e7e196d5d3
 REPORT RequestId: d34822a5-506e-4623-89fc-a6e7e196d5d3	Duration: 1146.22 ms	Billed Duration: 1200 ms	Memory Size: 128 MB	Max Memory Used: 97 MB	Init Duration: 480.06 ms
 
 ```
-
 
 
 _______________________________________________
