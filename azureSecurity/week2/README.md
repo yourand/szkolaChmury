@@ -5,7 +5,6 @@
 ###### Przygotowanie zmiennych
 
 ```powershell
-$userPassword=$(openssl rand -base64 12)
 $PasswordProfile = New-Object -TypeName Microsoft.Open.AzureAD.Model.PasswordProfile
 $PasswordProfile.Password = $(openssl rand -base64 12)
 ```
