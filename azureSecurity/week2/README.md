@@ -10,7 +10,7 @@ $PasswordProfile.Password = $(openssl rand -base64 12)
 ```
 ###### Utworzenie użytkowników
 
-```
+```powershell
 New-AzureADUser -DisplayName "Week2 01" -PasswordProfile $PasswordProfile `
 -UserPrincipalName "week02-01@azure.overseer.pl" `
 -AccountEnabled $true -MailNickName "week201" `
@@ -23,7 +23,7 @@ New-AzureADUser -DisplayName "Week2 02" -PasswordProfile $PasswordProfile `
 ```
 
 ###### Wynik
-```
+```powershell
 PS C:\Users\Robert> Get-AzureADUser -Filter "Department eq 'Week02'"
 
 ObjectId                             DisplayName UserPrincipalName     UserType
@@ -34,7 +34,7 @@ da837b29-998a-42f6-b4ed-c373e2f30001 Week2 01    week02-01@overseer.pl Member
 
 ###### Utworzenie grupy
 
-```
+```powershell
 New-AzureADMSGroup -DisplayName "Week 02 Users" `
 -Description "Dynamic group of week 02 users" `
 -MailEnabled $False `
@@ -52,7 +52,7 @@ Add-AzureADGroupOwner -ObjectId "482febce-c5d8-4891-9a29-bb8179e7e555" `
 
 ###### Wynik
 
-```
+```powershell
 PS C:\Users\Robert> Get-AzureADGroupMember -ObjectId "482febce-c5d8-4891-9a29-bb8179e7e555"
 
 ObjectId                             DisplayName UserPrincipalName     UserType
