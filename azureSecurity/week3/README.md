@@ -10,7 +10,15 @@
 ##### Realizacja
 
 - instalacja serwera 2019 i konfiguracja Active Directory
+![Alt text](https://github.com/yourand/szkolaChmury/blob/master/azureSecurity/week3/img/1-ad-view.PNG)
 - Instalacja i konfiguracja Azure AD Connect
+![Alt text](https://github.com/yourand/szkolaChmury/blob/master/azureSecurity/week3/img/4-1-ad-connect-setings.PNG)
+
+![Alt text](https://github.com/yourand/szkolaChmury/blob/master/azureSecurity/week3/img/5-ad-connect-setings.PNG)
+
+- syncronizacja danych
+![Alt text](https://github.com/yourand/szkolaChmury/blob/master/azureSecurity/week3/img/7-aad-users-clean.png)
+
 - dodanie polityki GPO
 
 ```
@@ -22,8 +30,8 @@ https://aadg.windows.net.nsatc.net value 1
 
 ##### Testy
 
-- logowanie do office 365 migrowanym użytkownikiem
-
+- logowanie do office 365 migrowanym użytkownikiem przy użyciu SSO (wymagał tylko nazwy użytkownika).
+![Alt text](https://github.com/yourand/szkolaChmury/blob/master/azureSecurity/week3/img/8-test_m.png)
   
 
 **Uwierzytelnianie wieloskładnikowe w Azure AD (Multi-Factor Authentication)**
@@ -42,15 +50,16 @@ https://aadg.windows.net.nsatc.net value 1
 
 ##### Testy
 
+- Założenie MFA z dozwolonym IP prywatnym
+![Alt text](https://github.com/yourand/szkolaChmury/blob/master/azureSecurity/week3/img/9-mfa-conf_m.png)
 
+- Wymaga sms
+![Alt text](https://github.com/yourand/szkolaChmury/blob/master/azureSecurity/week3/img/11-mfa-block-priv.PNG)
 
-Założenie MFA z dozwolonym IP prywatnym
+- Po dodaniu dozwolonego IP publicznego, nie wymaga drugiego składnika
 
-Wymaga sms
-
-Założenie MFA z dozwolonym adresem IP publicznym 
-
-Nie wymaga drugiego składnika
+- Syncronizacja zmian w AD onpremis dotycząca departamentu. Userzy trafili do grupy
+![Alt text](https://github.com/yourand/szkolaChmury/blob/master/azureSecurity/week3/img/grupa-dynamiczna_m.png)
 
 **Dostęp warunkowy przy logowaniu do Azure AD.**
 
@@ -62,3 +71,4 @@ Nie wymaga drugiego składnika
 
 - stworzenie "Named Location"  wskazującą na Polskę.
 - Utworzenie polityki Conditional Access
+![Alt text](https://github.com/yourand/szkolaChmury/blob/master/azureSecurity/week3/img/12-kondycja-mfa_m.png)
