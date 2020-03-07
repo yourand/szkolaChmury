@@ -45,14 +45,15 @@ https://aadg.windows.net.nsatc.net value 1
 
 - włącznie trial P2,
 - włączenie MFA,
+
+![Alt text](https://github.com/yourand/szkolaChmury/blob/master/azureSecurity/week3/img/9-mfa-conf_m.png)
+
 - określenie podsieci lokalnych,
 - Dodanie nazwy departamentu "IT" do użytkowników onpremis, stworzenie grupy dynamicznej.
 
 ##### Testy
 
 - Założenie MFA z dozwolonym IP prywatnym (Wymaga sms)
-![Alt text](https://github.com/yourand/szkolaChmury/blob/master/azureSecurity/week3/img/9-mfa-conf_m.png)
-
 ![Alt text](https://github.com/yourand/szkolaChmury/blob/master/azureSecurity/week3/img/11-mfa-block-priv.PNG)
 
 - Po dodaniu dozwolonego IP publicznego, nie wymaga drugiego składnika
