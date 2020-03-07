@@ -1,4 +1,4 @@
-#### Zadanie 1.
+#### Zadanie Tydzień 3 
 
 **Tworzenie połączenia hybrydowego**
 
@@ -58,7 +58,7 @@ https://aadg.windows.net.nsatc.net value 1
 
 - Po dodaniu dozwolonego IP publicznego, nie wymaga drugiego składnika
 
-- Syncronizacja zmian w AD onpremis dotycząca departamentu. Userzy trafili do grupy
+- Synchronizacja zmian w AD onpremis dotycząca departamentu. Userzy trafili do grupy
 ![Alt text](https://github.com/yourand/szkolaChmury/blob/master/azureSecurity/week3/img/grupa-dynamiczna_m.png)
 
 **Dostęp warunkowy przy logowaniu do Azure AD.**
