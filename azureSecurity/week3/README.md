@@ -70,5 +70,6 @@ https://aadg.windows.net.nsatc.net value 1
 ##### Realizacja
 
 - stworzenie "Named Location"  wskazującą na Polskę.
-- Utworzenie polityki Conditional Access
+- Utworzenie polityki Conditional Access  
+
 ![Alt text](https://github.com/yourand/szkolaChmury/blob/master/azureSecurity/week3/img/12-kondycja-mfa_m.png)
