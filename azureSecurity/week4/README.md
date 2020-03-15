@@ -38,11 +38,11 @@ POC: Zalogowanie się z dwóch geograficznie odległych miejsc na jedno konto:
 
 ##### Przegląd i dodanie ról
 
-**AAD
+**AAD**
 
 ![](https://github.com/yourand/szkolaChmury/blob/master/azureSecurity/week4/img/5-dodaj-role-1.jpg)
 
-**Subskrypcja
+**Subskrypcja**
 
 ![](https://github.com/yourand/szkolaChmury/blob/master/azureSecurity/week4/img/6-dodaj-role-sub.jpg)
 
