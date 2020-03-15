@@ -47,9 +47,8 @@ POC: Zalogowanie się z dwóch geograficznie odległych miejsc na jedno konto:
 ![](https://github.com/yourand/szkolaChmury/blob/master/azureSecurity/week4/img/6-dodaj-role-sub.jpg)
 
 
-##### Administrator Grup na życzenie
-
-- **przygotowanie roli**
+##### Administrator Grup na życzenie  
+- **przygotowanie roli**  
   ![](https://github.com/yourand/szkolaChmury/blob/master/azureSecurity/week4/img/7-rola-1.jpg)
 
 - **konfiguracja warunków uzyskania uprawnień z jednym akceptującym**
