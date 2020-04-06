@@ -133,10 +133,10 @@
 
 11. Konfiguracja Mikrotika.  
 
-   Konfiguracja z winbox:
-   IP kart sieciowych  
-   Routing  
-   Nat  
+   Konfiguracja z winbox:  
+   IP kart sieciowych,  
+   Routing,  
+   Nat.  
       
 12. Topologia.  
 
