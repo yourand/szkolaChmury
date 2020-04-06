@@ -76,8 +76,9 @@
 
    
 
-6. Utworzenie maszyny z Mikrotik na podstawie skryptu.
+6. Utworzenie maszyny z Mikrotik na podstawie skryptu.  
 
+![](https://github.com/yourand/szkolaChmury/blob/master/azureSecurity/week5-lab/img/1-mik-create.jpg)
    
 
 7. Wyklinanie z portalu vm Windows 10 w subnet backend-subnet.
@@ -130,11 +131,24 @@
 
    
 
-11. Konfiguracja Mikrotika.
+11. Konfiguracja Mikrotika.  
 
-12. Topologia.
+   Konfiguracja z winbox:
+   IP kart sieciowych  
+   Routing  
+   Nat  
+      
+12. Topologia.  
 
+![](https://github.com/yourand/szkolaChmury/blob/master/azureSecurity/week5-lab/img/2-topol.jpg)
     
 
 13. Testy.
 
+![](https://github.com/yourand/szkolaChmury/blob/master/azureSecurity/week5-lab/img/5-lynx-mtr.jpg)
+
+
+
+
+
+*tworzenie UDR z cmd nie przetestowane*
