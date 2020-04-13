@@ -18,9 +18,8 @@
   az group deployment create --name net01 --resource-group rghw5 \ 
   	--template-file "networking.json"
   ```
-
-  
-
-- 
+ 
+- Topologia sieci
+  ![](https://github.com/yourand/szkolaChmury/blob/master/azureSecurity/week5/img/1-topologia-hub-spoke.JPG)
 
 - 
