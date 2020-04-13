@@ -1,0 +1,203 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+    
+      "location": {
+        "type": "string",
+        "defaultValue": "[resourceGroup().location]",
+        "metadata": {
+          "description": "Location for all resources."
+        }
+      }
+    },
+    "variables": {
+      "hubVnetName": "vnet-hub01",
+      "hubVnetPrefix": "10.0.0.0/16",
+      "gatewaySubnetName": "sub-gateway01",
+      "gatewaySubnetPrefix": "10.0.0.0/24",
+      "firewallSubnetName": "sub-firewall01",
+      "firewallSubnetPrefix": "10.0.1.0/24",
+      "sharedSubnetName": "sub-shared01",
+      "sharedSubnetPrefix": "10.0.2.0/24",
+      "managmentSubnetName": "sub-management01",
+      "managmentSubnetPrefix": "10.0.3.0/24",
+      "SpokeVnetName": "vnet-spoke01",
+      "SpokeVnetPrefix": "10.1.0.0/16",
+      "appSubnetName": "sub-app01",
+      "appSubnetPrefix": "10.1.0.0/24",
+      "dbSubnetName": "sub-db01",
+      "dbSubnetPrefix": "10.1.1.0/24",
+      "hubID": "[resourceId('Microsoft.Network/virtualNetworks/', variables('hubVnetName'))]",
+      "spokeID": "[resourceId('Microsoft.Network/virtualNetworks/', variables('spokeVnetName'))]"
+    },
+    "resources": [
+      {
+        "comments": "HUB Virtual Network (VNet)",
+        "type": "Microsoft.Network/virtualNetworks",
+        "name": "[variables('hubVnetName')]",
+        "apiVersion": "2019-11-01",
+        "location": "[parameters('location')]",
+        "properties": {
+          "addressSpace": {
+            "addressPrefixes": [
+              "[variables('hubVnetPrefix')]"
+            ]
+          },
+          "enableDdosProtection": false,
+          "enableVmProtection": false
+        }
+      },
+      {
+        "comments": "Gateway Subnet",
+        "type": "Microsoft.Network/virtualNetworks/subnets",
+        "name": "[concat(variables('hubVnetName'), '/', variables('gatewaySubnetName'))]",
+        "apiVersion": "2019-11-01",
+        "dependsOn": [
+          "[resourceId('Microsoft.Network/virtualNetworks', variables('hubVnetName'))]"
+        ],
+        "properties": {
+          "addressPrefix": "[variables('gatewaySubnetPrefix')]"
+        }
+      },
+      {
+        "comments": "Firewall Subnet",
+        "type": "Microsoft.Network/virtualNetworks/subnets",
+        "name": "[concat(variables('hubVnetName'), '/', variables('firewallSubnetName'))]",
+        "apiVersion": "2019-11-01",
+        "dependsOn": [
+          "[resourceId('Microsoft.Network/virtualNetworks', variables('hubVnetName'))]",
+          "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('hubVnetName'), variables('gatewaySubnetName'))]"
+          
+        ],
+        "properties": {
+          "addressPrefix": "[variables('firewallSubnetPrefix')]"
+        }
+      },
+      {
+        "comments": "Shared Subnet",
+        "type": "Microsoft.Network/virtualNetworks/subnets",
+        "name": "[concat(variables('hubVnetName'), '/', variables('sharedSubnetName'))]",
+        "apiVersion": "2019-11-01",
+        "dependsOn": [
+          "[resourceId('Microsoft.Network/virtualNetworks', variables('hubVnetName'))]",
+          "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('hubVnetName'), variables('gatewaySubnetName'))]",
+          "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('hubVnetName'), variables('firewallSubnetName'))]"
+          
+        ],
+        "properties": {
+          "addressPrefix": "[variables('sharedSubnetPrefix')]"
+        }
+      },
+      {
+        "comments": "Managment Subnet",
+        "type": "Microsoft.Network/virtualNetworks/subnets",
+        "name": "[concat(variables('hubVnetName'), '/', variables('managmentSubnetName'))]",
+        "apiVersion": "2019-11-01",
+        "dependsOn": [
+          "[resourceId('Microsoft.Network/virtualNetworks', variables('hubVnetName'))]",
+          "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('hubVnetName'), variables('gatewaySubnetName'))]",
+          "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('hubVnetName'), variables('firewallSubnetName'))]",
+          "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('hubVnetName'), variables('sharedSubnetName'))]"
+        ],
+        "properties": {
+          "addressPrefix": "[variables('managmentSubnetPrefix')]"
+        }
+      },
+      {
+        "comments": "Spoke Virtual Network (VNet)",
+        "type": "Microsoft.Network/virtualNetworks",
+        "name": "[variables('spokeVnetName')]",
+        "apiVersion": "2019-11-01",
+        "location": "[parameters('location')]",
+        "properties": {
+          "addressSpace": {
+            "addressPrefixes": [
+              "[variables('spokeVnetPrefix')]"
+            ]
+          },
+          "enableDdosProtection": false,
+          "enableVmProtection": false
+        }
+      },
+      {
+        "comments": "App Subnet",
+        "type": "Microsoft.Network/virtualNetworks/subnets",
+        "name": "[concat(variables('spokeVnetName'), '/', variables('appSubnetName'))]",
+        "apiVersion": "2019-11-01",
+        "dependsOn": [
+          "[resourceId('Microsoft.Network/virtualNetworks', variables('spokeVnetName'))]"
+        ],
+        "properties": {
+          "addressPrefix": "[variables('appSubnetPrefix')]"
+        }
+      },
+      {
+        "comments": "DB Subnet",
+        "type": "Microsoft.Network/virtualNetworks/subnets",
+        "name": "[concat(variables('spokeVnetName'), '/', variables('dbSubnetName'))]",
+        "apiVersion": "2019-11-01",
+        "dependsOn": [
+          "[resourceId('Microsoft.Network/virtualNetworks', variables('spokeVnetName'))]",
+          "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('spokeVnetName'), variables('appSubnetName'))]"
+        ],
+        "properties": {
+          "addressPrefix": "[variables('dbSubnetPrefix')]"
+        }
+      },
+      {
+      "comments": "Peering hub01->spoke01",
+      "apiVersion": "2019-11-01",
+      "type": "Microsoft.Network/virtualNetworks/virtualNetworkPeerings",
+      "name": "[concat(variables('hubVnetName'), '/peering_', variables('hubVnetName'), '_', variables('spokeVnetName'))]",
+      "location": "[parameters('location')]",
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/virtualNetworks', variables('hubVnetName'))]",
+        "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('hubVnetName'), variables('gatewaySubnetName'))]",
+        "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('hubVnetName'), variables('firewallSubnetName'))]",
+        "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('hubVnetName'), variables('sharedSubnetName'))]",
+        "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('hubVnetName'), variables('managmentSubnetName'))]",
+        "[resourceId('Microsoft.Network/virtualNetworks', variables('spokeVnetName'))]",
+        "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('spokeVnetName'), variables('appSubnetName'))]",
+        "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('spokeVnetName'), variables('dbSubnetName'))]"
+      ],
+      "properties": {
+        "allowVirtualNetworkAccess": true,
+        "allowForwardedTraffic": true,
+        "allowGatewayTransit": false,
+        "useRemoteGateways": false,
+        "remoteVirtualNetwork": {
+          "id": "[variables('spokeID')]"
+        }
+      }
+    },
+    {
+      "comments": "Peering hub01<-spoke01",
+      "apiVersion": "2019-11-01",
+      "type": "Microsoft.Network/virtualNetworks/virtualNetworkPeerings",
+      "name": "[concat(variables('spokeVnetName'), '/peering_', variables('spokeVnetName'), '_', variables('hubVnetName'))]",
+      "location": "[parameters('location')]",
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/virtualNetworks', variables('hubVnetName'))]",
+        "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('hubVnetName'), variables('gatewaySubnetName'))]",
+        "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('hubVnetName'), variables('firewallSubnetName'))]",
+        "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('hubVnetName'), variables('sharedSubnetName'))]",
+        "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('hubVnetName'), variables('managmentSubnetName'))]",
+        "[resourceId('Microsoft.Network/virtualNetworks', variables('spokeVnetName'))]",
+        "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('spokeVnetName'), variables('appSubnetName'))]",
+        "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('spokeVnetName'), variables('dbSubnetName'))]"
+      ],
+      "properties": {
+        "allowVirtualNetworkAccess": true,
+        "allowForwardedTraffic": true,
+        "allowGatewayTransit": false,
+        "useRemoteGateways": false,
+        "remoteVirtualNetwork": {
+          "id": "[variables('hubID')]"
+        }
+      }
+    }
+
+    ],
+    "outputs": {}
+  }
