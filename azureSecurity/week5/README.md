@@ -30,8 +30,27 @@
   az group deployment create --name net01 --resource-group rghw5 \ 
   	--template-file "networking.json"
   ```
- 
+
 - Topologia sieci
   ![](https://github.com/yourand/szkolaChmury/blob/master/azureSecurity/week5/img/1-topologia-hub-spoke.JPG)
 
 - 
+##### Instalacja serwera aplikacyjnego i bazy danych
+- Instalacja serwerów i aplikacji
+- Topologia
+  ![](https://github.com/yourand/szkolaChmury/blob/master/azureSecurity/week5/img/2-topologia-net-serwery.JPG)
+
+##### Zadania
+
+###### Test peeringu oraz domyślnego routingu
+  ![](https://github.com/yourand/szkolaChmury/blob/master/azureSecurity/week5/img/3-test-peering.JPG)
+
+###### Przygotowanie odpowiednich reguł NSG
+####### Możliwy ruch z maszyny z serwerem aplikacyjnym po porcie baz danych do serwera bazodanowego a z sieci Hub oraz sieci Spoke tylko ruch po portach zarządczych (np. 22 dla SSH czy 3389 dla Windows). Ruch z innych sieci czy Internetu po tych portach nie był możliwy.  
+Widok NSG  
+  ![](https://github.com/yourand/szkolaChmury/blob/master/azureSecurity/week5/img/6-nsg-view.JPG)
+Weryfikacja dostępu do MySQL z sieci Hub oraz z sieci Spoke  
+  ![](https://github.com/yourand/szkolaChmury/blob/master/azureSecurity/week5/img/1-topologia-hub-spoke.JPG)
+Weryfikacja dostepu SSH z internetu do serwera MySQL  
+  ![](https://github.com/yourand/szkolaChmury/blob/master/azureSecurity/week5/img/1-topologia-hub-spoke.JPG)
+    
