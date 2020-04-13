@@ -48,9 +48,9 @@
 ###### Przygotowanie odpowiednich reguł NSG
 ###### Możliwy ruch z maszyny z serwerem aplikacyjnym po porcie baz danych do serwera bazodanowego a z sieci Hub oraz sieci Spoke tylko ruch po portach zarządczych (np. 22 dla SSH czy 3389 dla Windows). Ruch z innych sieci czy Internetu po tych portach nie był możliwy.  
 Widok NSG  
-  ![](https://github.com/yourand/szkolaChmury/blob/master/azureSecurity/week5/img/6-nsg-view.JPG)
+  ![](https://github.com/yourand/szkolaChmury/blob/master/azureSecurity/week5/img/6-nsg-view.JPG)  
 Weryfikacja dostępu do MySQL z sieci Hub oraz z sieci Spoke  
-  ![](https://github.com/yourand/szkolaChmury/blob/master/azureSecurity/week5/img/5-deny-ssh-internet.JPG)
+  ![](https://github.com/yourand/szkolaChmury/blob/master/azureSecurity/week5/img/4-allowMysqlAsg.JPG)  
 Weryfikacja dostepu SSH z internetu do serwera MySQL  
-  ![](https://github.com/yourand/szkolaChmury/blob/master/azureSecurity/week5/img/1-topologia-hub-spoke.JPG)
+  ![](https://github.com/yourand/szkolaChmury/blob/master/azureSecurity/week5/img/5-deny-ssh-internet.JPG)
     
