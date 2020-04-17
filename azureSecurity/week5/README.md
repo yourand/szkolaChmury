@@ -76,3 +76,14 @@ b) Wykorzystując Service Tag zapewnij, że osiągniesz następujące konfigurac
 
 ##### 3. Włącz Network Watcher i zbierz dane
 
+  ![](https://github.com/yourand/szkolaChmury/blob/master/azureSecurity/week5/img/10-traffic.JPG)  
+  
+  ![](https://github.com/yourand/szkolaChmury/blob/master/azureSecurity/week5/img/11-traffic-vm.JPG)
+
+
+Po kilku dniach dniach zbierania danych o trafficu w kontekście security:
+
+- Nie należy zostawiać vm z publicznym IP, klasy adresowa skanowane są automatycznie w poszukiwaniu podatności, głownie z kierunku Chin.
+- Ruch do Internetu z vnet-tów jest swobodny nie nadzorowany, warto przekierować ruch przez jeden punkt, który będzie nadzorowany.
+
+  ![](https://github.com/yourand/szkolaChmury/blob/master/azureSecurity/week5/img/12-traffic-trend-malic.JPG)
