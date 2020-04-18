@@ -87,3 +87,8 @@ Po kilku dniach dniach zbierania danych o trafficu w kontekście security:
 - Ruch do Internetu z vnet-tów jest swobodny nie nadzorowany, warto przekierować ruch przez jeden punkt, który będzie nadzorowany.
 
   ![](https://github.com/yourand/szkolaChmury/blob/master/azureSecurity/week5/img/12-traffic-trend-malic.JPG)
+
+
+##### 4. Projekt Twojej sieci w Azure
+  ![](https://github.com/yourand/szkolaChmury/blob/master/azureSecurity/week5/img/hub02.jpg)  
+  
